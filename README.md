@@ -135,6 +135,16 @@ const hs = loadData('highScore', 0);
 
 Use this to keep small data across refreshes on the same device.
 
+## Betting system (#3)
+
+This project includes a simple betting system for demos:
+- You start with a persisted balance (default $100).
+- Enter a bet amount and a target score, then click "Place Bet".
+- The stake is deducted immediately. If you reach the target score before losing the ball you win 2x your stake (payout returns stake + winnings). If you lose the ball before reaching the target you forfeit the stake.
+- Balance is saved in localStorage under `player_balance_v1`.
+
+Use responsibly — this is a small demo mechanic for classroom projects.
+
 ---
 
 ## Helpful Copilot Prompts
