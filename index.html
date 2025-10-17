@@ -10,10 +10,46 @@
     <header class="site-header">
       <h1>Tiny App / 2D Game</h1>
       <div id="hud" aria-live="polite">
-        <span id="score">Score: 0</span>
-        <button id="btn-restart" type="button">Restart</button>
+        <div class="hud-left">
+          <span id="score">Score: 0</span>
+          <span id="balance">Balance: $0</span>
+        </div>
+        <div class="hud-right">
+          <label for="bet-amount">Bet $</label>
+          <input id="bet-amount" type="number" min="1" step="1" value="5" />
+          <label for="bet-target">Target</label>
+          <input id="bet-target" type="number" min="1" step="1" value="10" />
+          <button id="btn-place-bet" type="button">Place Bet</button>
+          <button id="btn-restart" type="button">Restart</button>
+        </div>
       </div>
     </header>
+
+    <!-- Notifications container (for in-page, accessible toasts replacing alert()) -->
+    <div id="notifications" aria-live="polite" aria-atomic="true" class="notifications" role="status"></div>
+
+    <!-- Simple Blackjack game using the betting system -->
+    <section id="blackjack" class="blackjack">
+      <h2>Blackjack</h2>
+      <div class="bj-table">
+        <div class="dealer">
+          <h3>Dealer</h3>
+          <div id="dealer-cards" class="cards" aria-live="polite"></div>
+        </div>
+        <div class="player">
+          <h3>Player</h3>
+          <div id="player-cards" class="cards" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="bj-controls">
+        <button id="btn-hit" type="button" disabled>Hit</button>
+        <button id="btn-stand" type="button" disabled>Stand</button>
+        <button id="btn-next-hand" type="button" disabled>Next Hand</button>
+      </div>
+
+      <div id="bj-message" class="bj-message" aria-live="polite"></div>
+    </section>
 
     <main>
       <canvas id="game" width="480" height="320" aria-label="Game canvas" role="img"></canvas>

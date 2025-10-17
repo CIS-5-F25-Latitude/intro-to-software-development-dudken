@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/DMgPsbn3)
 # Tiny App / 2D Game Starter (Codespaces + Copilot + GitHub Pages)
 
 Build ANY small project you want (2D game encouraged). Keep scope tiny so you can finish and share a public link.
@@ -133,6 +134,16 @@ const hs = loadData('highScore', 0);
 ```
 
 Use this to keep small data across refreshes on the same device.
+
+## Betting system (#3)
+
+This project includes a simple betting system for demos:
+- You start with a persisted balance (default $100).
+- Enter a bet amount and a target score, then click "Place Bet".
+- The stake is deducted immediately. If you reach the target score before losing the ball you win 2x your stake (payout returns stake + winnings). If you lose the ball before reaching the target you forfeit the stake.
+- Balance is saved in localStorage under `player_balance_v1`.
+
+Use responsibly — this is a small demo mechanic for classroom projects.
 
 ---
 
